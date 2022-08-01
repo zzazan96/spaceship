@@ -1,6 +1,11 @@
 from contextlib import redirect_stderr
 from django.shortcuts import render
 
+from TitanicApp.models import Test
+
+from django.http import HttpResponseRedirect
+
+
 # Create your views here.
 
 def Main(request):
@@ -44,3 +49,15 @@ def Questions12(request):
 
 def Questions13(request):
     return render(request, 'TitanicApp/Questions13.html')
+
+def test1(request):
+    return render(request, 'TitanicApp/test1.html')
+
+def add(request):
+    test = Test()
+    
+    test.passengerid = request.POST['PassengerId']
+    test.save()
+   
+
+    return HttpResponseRedirect('/Main')

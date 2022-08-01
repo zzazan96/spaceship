@@ -76,6 +76,7 @@ WSGI_APPLICATION = 'TitanicPj.wsgi.application'
 
 DATABASES = {
     'default': {
+        'ENGINE': 'django.db.backends.mysql',
         'NAME': 'spaceship',
         'USER': 'Spaceship',
         'PASSWORD': 'Spaceship',

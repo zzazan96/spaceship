@@ -21,7 +21,9 @@ import TitanicApp.views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', TitanicApp.views.Main, name='Main'),
-    path('Main/', TitanicApp.views.Questions1, name='Questions1'),
+    path('test1/', TitanicApp.views.test1, name='test1'),
+    path('test1/add', TitanicApp.views.add, name='test1'),
+    path('Main/', TitanicApp.views.Questions1, name='add'),
     path('Main/Questions1/', TitanicApp.views.Questions2, name='Questions2'),
     path('Main/Questions1/Questions2', TitanicApp.views.Questions3, name='Questions3'),
     path('Main/Questions1/Questions2/Questions3', TitanicApp.views.Questions4, name='Questions4'),
