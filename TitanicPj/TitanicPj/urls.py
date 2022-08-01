@@ -28,12 +28,12 @@ urlpatterns = [
     path('', TitanicApp.views.Questions5, name='Questions5'),
     path('', TitanicApp.views.Questions6, name='Questions6'),
     path('', TitanicApp.views.Questions7, name='Questions7'),
-    path('', TitanicApp.views.Questions8, name='Questions8'),
-    path('', TitanicApp.views.Questions9, name='Questions9'),
-    path('', TitanicApp.views.Questions10, name='Questions10'),
-    path('', TitanicApp.views.Questions11, name='Questions11'),
-    path('', TitanicApp.views.Questions12, name='Questions12'),
-    path('', TitanicApp.views.Questions13, name='Questions13'),
+    path('Main/Questions1/Questions2/Questions8', TitanicApp.views.Questions8, name='Questions8'),
+    path('Main/Questions1/Questions2/Questions8/Questions9/', TitanicApp.views.Questions9, name='Questions9'),
+    path('Main/Questions1/Questions2/Questions8/Questions9/Questions10/', TitanicApp.views.Questions10, name='Questions10'),
+    path('Main/Questions1/Questions2/Questions8/Questions9/Questions10/Questions11/', TitanicApp.views.Questions11, name='Questions11'),
+    path('Main/Questions1/Questions2/Questions8/Questions9/Questions10/Questions11/Questions12/', TitanicApp.views.Questions12, name='Questions12'),
+    path('Main/Questions1/Questions2/Questions8/Questions9/Questions10/Questions11/Questions12/Questions13/', TitanicApp.views.Questions13, name='Questions13'),
 
     
 ]

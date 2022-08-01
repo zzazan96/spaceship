@@ -35,19 +35,39 @@
             </div>
         </nav>
         <!-- Masthead-->
+        <script>
+            window.onload = function(){
+                var h = document.getElementById('hideBtn');
+                var op = document.getElementById('openBtn');
+                var ct = document.getElementById('checktext');
+
+                h.onclick = function(){
+                    ct.style.display = 'none';
+                }
+
+                op.onclick = function(){
+                    ct.style.display = 'block'
+                    ct.style.fontSize = '20pt';
+                }
+            }
+        </script>
         <header class="masthead bg-primary text-white text-center">
             <div class="container d-flex align-items-center flex-column">
-                <!-- Masthead Avatar Image-->
-                <img class="masthead-avatar mb-5" src="../../static/images/space.gif" alt="..." />
-                <!-- Masthead Heading-->
-                <h1 class="masthead-heading text-uppercase mb-0">Start</h1>
-                <!-- Icon Divider-->
-                <div class="divider-custom divider-light">
-                    <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                    <div class="divider-custom-line"></div>
+                <div id="wrapper">
+                    <label for="yes_no_radio">쇼핑몰을 이용하시겠습니까?</label>
+                    <br>
+                    <br>
+                    <input type="radio" name="yes or no" id="openBtn">Yes</input>
+                    <input type="radio" name="yes or no" id="hideBtn" checked>No</input>
+                    <hr>
+                    <div id="checktext">
+                    <p id="checktext">얼마를 사용하실지 입력해주세요.</p>
+                    <input type="number" id="checktext" min="0" max="30000">
+                    </div>
+                    <br>
+                    <button href="/Questions10">이전</button>
+                    <button href="/Questions12">다음</button>
                 </div>
-                <!-- Masthead Subheading-->
             </div>
         </header>
         
