@@ -11757,15 +11757,15 @@ footer.footer {
 }
 
 .swiper {
-  width: 60%;
-  height: 50%;
+  width: 100%;
+  height: 100%;
 }
 
 .swiper-slide {
   color: #eee;
   text-align: center;
   font-size: 18px;
-  background: url("../images/space.jpg");
+  background: url("../../static/images/space.jpg");
 
   /* Center slide text vertically */
   display: -webkit-box;
