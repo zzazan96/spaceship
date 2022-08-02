@@ -20,22 +20,10 @@ import TitanicApp.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', TitanicApp.views.Index, name='Index'),
+    path('', TitanicApp.views.index1, name='index1'),
+    path('index1/', TitanicApp.views.index2, name='index2'),
+    path('index1/index2', TitanicApp.views.index3, name='index3'),
     path('test1/', TitanicApp.views.test1, name='test1'),
     path('test1/add', TitanicApp.views.add, name='test1'),
-    path('Main/', TitanicApp.views.Questions1, name='add'),
-    path('Main/Questions1/', TitanicApp.views.Questions2, name='Questions2'),
-    path('Main/Questions1/Questions2', TitanicApp.views.Questions3, name='Questions3'),
-    path('Main/Questions1/Questions2/Questions3', TitanicApp.views.Questions4, name='Questions4'),
-    path('', TitanicApp.views.Questions5, name='Questions5'),
-    path('', TitanicApp.views.Questions6, name='Questions6'),
-    path('', TitanicApp.views.Questions7, name='Questions7'),
-    path('Main/Questions1/Questions2/Questions8', TitanicApp.views.Questions8, name='Questions8'),
-    path('Main/Questions1/Questions2/Questions8/Questions9/', TitanicApp.views.Questions9, name='Questions9'),
-    path('Main/Questions1/Questions2/Questions8/Questions9/Questions10/', TitanicApp.views.Questions10, name='Questions10'),
-    path('Main/Questions1/Questions2/Questions8/Questions9/Questions10/Questions11/', TitanicApp.views.Questions11, name='Questions11'),
-    path('Main/Questions1/Questions2/Questions8/Questions9/Questions10/Questions11/Questions12/', TitanicApp.views.Questions12, name='Questions12'),
-    path('Main/Questions1/Questions2/Questions8/Questions9/Questions10/Questions11/Questions12/Questions13/', TitanicApp.views.Questions13, name='Questions13'),
-
     
 ]
