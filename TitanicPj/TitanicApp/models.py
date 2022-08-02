@@ -26,7 +26,7 @@ class Test(models.Model):
     passengerid = models.CharField(db_column='PassengerId', max_length=15)  # Field name made lowercase.
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'test'
 
 
@@ -47,5 +47,5 @@ class Train(models.Model):
     cabin_side = models.FloatField(db_column='Cabin_Side', blank=True, null=True)  # Field name made lowercase.
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'train'
