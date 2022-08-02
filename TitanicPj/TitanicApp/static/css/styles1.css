@@ -11718,8 +11718,6 @@ footer.footer {
 	color: #eee;
 	text-align: center;
 	font-size: 18px;
-	background: url("../../static/images/space01.gif");
-	background-size: cover;
 
 	/* Center slide text vertically */
 	display: -webkit-box;
@@ -11744,5 +11742,16 @@ footer.footer {
 }
 
 .good {
-	height: 100vh;
+	height: 93vh;
+}
+
+.text-wrap{
+	position: absolute;
+	top: 50%;
+	left: 0;
+	right: 0;
+	margin: auto;
+	text-align: center;
+	transition: 0.5s;
+	z-index: 1;
 }
