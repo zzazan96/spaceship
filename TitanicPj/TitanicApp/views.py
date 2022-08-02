@@ -27,4 +27,4 @@ def add(request):
     test.save()
    
 
-    return HttpResponseRedirect('/Main')
+    return HttpResponseRedirect('/')
