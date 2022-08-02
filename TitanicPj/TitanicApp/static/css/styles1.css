@@ -11710,31 +11710,6 @@ footer.footer {
 }
 
 .swiper {
-<<<<<<< HEAD
-  width: 100%;
-  height: 100%;
-}
-
-.swiper-slide {
-  color: #eee;
-  text-align: center;
-  font-size: 18px;
-  background: url("../../static/images/space.jpg");
-
-  /* Center slide text vertically */
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
-=======
 	width: 100%;
 	height: 100%;
 }
@@ -11743,7 +11718,7 @@ footer.footer {
 	color: #eee;
 	text-align: center;
 	font-size: 18px;
-	background: url("../images/space.jpg");
+	background: url("../../static/images/space.jpg");
 
 	/* Center slide text vertically */
 	display: -webkit-box;
@@ -11758,7 +11733,6 @@ footer.footer {
 	-ms-flex-align: center;
 	-webkit-align-items: center;
 	align-items: center;
->>>>>>> 383e3e2d8161211c1b6e2a2dee54c3bf10b93372
 }
 
 .swiper-slide img {
@@ -11766,4 +11740,8 @@ footer.footer {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
+}
+
+.good {
+	height: 100vh;
 }

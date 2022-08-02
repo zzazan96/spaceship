@@ -9,7 +9,7 @@ from django.http import HttpResponseRedirect
 # Create your views here.
 
 def Index(request):
-    return render(request, 'TitanicApp/index.html')
+    return render(request, 'TitanicApp/index1.html')
 
 def Main(request):
     return render(request, 'TitanicApp/Main.html')
