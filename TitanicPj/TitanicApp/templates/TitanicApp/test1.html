@@ -13,6 +13,12 @@
       <!-- 여기에 추가 -->
       {% csrf_token %} PassengerId :
       <input type="text" name="PassengerId" value="" /><br />
+
+      <select name="HomePlanet">
+        <option value="0">지구</option>
+        <option value="1" selected>유로파</option>
+        <option value="2">화성</option>
+      </select>
       {% comment %} Last name: <input type="text" name="ln" value="" /><br />
       Email address: <input type="text" name="email" value="" /><br />
       {% endcomment %}

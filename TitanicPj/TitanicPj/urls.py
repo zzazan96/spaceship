@@ -22,7 +22,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', TitanicApp.views.index1, name='index1'),
     path('index1/', TitanicApp.views.index2, name='index2'),
-    path('index1/index2', TitanicApp.views.index3, name='index3'),
+    path('index1/add', TitanicApp.views.add, name='index_add'),
+    path('index3/', TitanicApp.views.index3, name='index3'),
     path('test1/', TitanicApp.views.test1, name='test1'),
     path('test1/add', TitanicApp.views.add, name='test1'),
     

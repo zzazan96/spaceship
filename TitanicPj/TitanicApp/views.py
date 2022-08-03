@@ -24,7 +24,17 @@ def add(request):
     test = Test()
     
     test.passengerid = request.POST['PassengerId']
+    test.age = request.POST['Age']
+    test.homeplanet = request.POST['HomePlanet']
+    test.destination = request.POST['Destination']
+    test.cryosleep = request.POST['CryoSleep']
+    test.vip = request.POST['VIP']
+    test.roomservice = request.POST['RoomService']
+    test.foodcourt = request.POST['FoodCourt']
+    test.shoppingmall = request.POST['ShoppingMall']
+    test.spa = request.POST['Spa']
+    test.vrdeck = request.POST['VRDeck']
     test.save()
    
 
-    return HttpResponseRedirect('/')
+    return HttpResponseRedirect('/index3')

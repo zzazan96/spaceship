@@ -9,24 +9,23 @@ from django.db import models
 
 
 class Test(models.Model):
-    homeplanet = models.FloatField(db_column='HomePlanet', blank=True, null=True)  # Field name made lowercase.
-    cryosleep = models.FloatField(db_column='CryoSleep', blank=True, null=True)  # Field name made lowercase.
-    destination = models.FloatField(db_column='Destination', blank=True, null=True)  # Field name made lowercase.
-    age = models.FloatField(db_column='Age', blank=True, null=True)  # Field name made lowercase.
-    vip = models.FloatField(db_column='VIP', blank=True, null=True)  # Field name made lowercase.
-    roomservice = models.FloatField(db_column='RoomService', blank=True, null=True)  # Field name made lowercase.
-    foodcourt = models.FloatField(db_column='FoodCourt', blank=True, null=True)  # Field name made lowercase.
-    shoppingmall = models.FloatField(db_column='ShoppingMall', blank=True, null=True)  # Field name made lowercase.
-    spa = models.FloatField(db_column='Spa', blank=True, null=True)  # Field name made lowercase.
-    vrdeck = models.FloatField(db_column='VRDeck', blank=True, null=True)  # Field name made lowercase.
-    transported = models.IntegerField(db_column='Transported', blank=True, null=True)  # Field name made lowercase.
-    cabin_deck = models.FloatField(db_column='Cabin_Deck', blank=True, null=True)  # Field name made lowercase.
-    cabin_num = models.IntegerField(db_column='Cabin_Num', blank=True, null=True)  # Field name made lowercase.
-    cabin_side = models.FloatField(db_column='Cabin_Side', blank=True, null=True)  # Field name made lowercase.
+    homeplanet = models.FloatField(db_column='HomePlanet', default=0 ,blank=True, null=False)  # Field name made lowercase.
+    cryosleep = models.FloatField(db_column='CryoSleep', default=0 , blank=True, null=False)  # Field name made lowercase.
+    destination = models.FloatField(db_column='Destination', default=0 ,blank=True, null=False)  # Field name made lowercase.
+    age = models.FloatField(db_column='Age', default=0 ,blank=True, null=False)  # Field name made lowercase.
+    vip = models.FloatField(db_column='VIP', default=0 ,blank=True, null=False)  # Field name made lowercase.
+    roomservice = models.FloatField(db_column='RoomService', default=0 ,blank=True, null=False)  # Field name made lowercase.
+    foodcourt = models.FloatField(db_column='FoodCourt', default=0 ,blank=True, null=False)  # Field name made lowercase.
+    shoppingmall = models.FloatField(db_column='ShoppingMall', default=0 ,blank=True, null=False)  # Field name made lowercase.
+    spa = models.FloatField(db_column='Spa', default=0 ,blank=True, null=False)  # Field name made lowercase.
+    vrdeck = models.FloatField(db_column='VRDeck', default=0 ,blank=True, null=False)  # Field name made lowercase.
+    cabin_deck = models.FloatField(db_column='Cabin_Deck', default=0 ,blank=True, null=False)  # Field name made lowercase.
+    cabin_num = models.IntegerField(db_column='Cabin_Num', default=0 ,blank=True, null=False)  # Field name made lowercase.
+    cabin_side = models.FloatField(db_column='Cabin_Side', default=0 ,blank=True, null=False)  # Field name made lowercase.
     passengerid = models.CharField(db_column='PassengerId', max_length=15)  # Field name made lowercase.
 
     class Meta:
-        managed = True
+        managed = False
         db_table = 'test'
 
 
@@ -47,5 +46,5 @@ class Train(models.Model):
     cabin_side = models.FloatField(db_column='Cabin_Side', blank=True, null=True)  # Field name made lowercase.
 
     class Meta:
-        managed = True
+        managed = False
         db_table = 'train'
