@@ -30,3 +30,4 @@ df_train = pd.read_sql_query(sql_1, conn)
 df_test = pd.read_sql_query(sql_2, conn)
 head=df_train.head()
 print(head)
+hi
