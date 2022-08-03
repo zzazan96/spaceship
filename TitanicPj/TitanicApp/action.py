@@ -24,6 +24,9 @@ import pymysql as sql
 conn = sql.connect(host='localhost',port=3306 ,user='Spaceship',password='Spaceship',db='spaceship')
 
 sql_1 = "select * from train"
+sq1_2 = "select * from test"
 
 df_train = pd.read_sql_query(sql_1, conn)
-df_train.head()
+df_test = pd.read_sql_query(sql_2, conn)
+head=df_train.head()
+print(head)
