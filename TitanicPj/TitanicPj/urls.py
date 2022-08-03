@@ -23,8 +23,10 @@ urlpatterns = [
     path('', TitanicApp.views.index1, name='index1'),
     path('index1/', TitanicApp.views.index2, name='index2'),
     path('index1/add', TitanicApp.views.add, name='index_add'),
+    path('index2_2/', TitanicApp.views.index2_2, name='index2_2'),
     path('index3/', TitanicApp.views.index3, name='index3'),
     path('test1/', TitanicApp.views.test1, name='test1'),
     path('test1/add', TitanicApp.views.add, name='test1'),
+     path('test2/', TitanicApp.views.test2, name='test2'),
     
 ]

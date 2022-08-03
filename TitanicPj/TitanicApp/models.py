@@ -22,7 +22,7 @@ class Test(models.Model):
     cabin_deck = models.FloatField(db_column='Cabin_Deck', default=0 ,blank=True, null=False)  # Field name made lowercase.
     cabin_num = models.IntegerField(db_column='Cabin_Num', default=0 ,blank=True, null=False)  # Field name made lowercase.
     cabin_side = models.FloatField(db_column='Cabin_Side', default=0 ,blank=True, null=False)  # Field name made lowercase.
-    passengerid = models.CharField(db_column='PassengerId', max_length=15)  # Field name made lowercase.
+    passengerid = models.CharField(db_column='PassengerId', max_length=15, primary_key=True)  # Field name made lowercase.
 
     class Meta:
         managed = False

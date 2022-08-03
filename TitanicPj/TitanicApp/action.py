@@ -23,6 +23,8 @@ import pymysql as sql
 
 conn = sql.connect(host='localhost',port=3306 ,user='Spaceship',password='Spaceship',db='spaceship')
 
+
+
 sql_1 = "select * from train"
 sql_2 = "select * from test"
 
@@ -56,4 +58,8 @@ print(acc_log)
 output= pd.DataFrame(df_test)
 output['Transported'] = Y_pre
 
-print(output.tail())
+# print(output.tail())
+# print("action")
+
+    
+# learning(conn)
