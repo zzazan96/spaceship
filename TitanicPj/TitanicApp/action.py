@@ -58,8 +58,21 @@ print(acc_log)
 output= pd.DataFrame(df_test)
 output['Transported'] = Y_pre
 
+mean_CS = output[["CryoSleep", "Transported"]].groupby(['CryoSleep'], as_index=True).mean()
+mean_VIP =output[["VIP", "Transported"]].groupby(['VIP'], as_index=True).mean()
+mean_HP =output[["HomePlanet", "Transported"]].groupby(['HomePlanet'], as_index=True).mean()
+mean_DT =output[["Destination", "Transported"]].groupby(['Destination'], as_index=True).mean()
+mean_AGE =output[["Age", "Transported"]].groupby(['Age'], as_index=True).mean()
 # print(output.tail())
 # print("action")
+# train[train["Transported"] == 1]["Age"]
+
+print(mean_CS)
+print(mean_VIP)
+print(mean_HP)
+print(mean_DT)
+print(mean_AGE)
+
 
     
 # learning(conn)

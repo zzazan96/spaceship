@@ -11,7 +11,27 @@
   <body>
     {% csrf_token %}
     <h1>train</h1>
-
-    {{ last_output|safe }}
+    <table>
+      <thead>
+        <tr>
+          <td>이름</td>
+          <td>생존</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{ pred.passengerid }}</td>
+          {% if pred.transported == 0 %}
+          <td>you die</td>
+          {% else %}
+          <td>survived</td>
+          {% endif %}
+        </tr>
+      </tbody>
+    </table>
+    <div>
+      동면여부별 생존율
+      <br />
+    </div>
   </body>
 </html>

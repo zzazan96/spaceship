@@ -48,3 +48,25 @@ class Train(models.Model):
     class Meta:
         managed = False
         db_table = 'train'
+
+class Pred(models.Model):
+    homeplanet = models.FloatField(db_column='HomePlanet', default=0 ,blank=True, null=False)  # Field name made lowercase.
+    cryosleep = models.FloatField(db_column='CryoSleep', default=0 , blank=True, null=False)  # Field name made lowercase.
+    destination = models.FloatField(db_column='Destination', default=0 ,blank=True, null=False)  # Field name made lowercase.
+    age = models.FloatField(db_column='Age', default=0 ,blank=True, null=False)  # Field name made lowercase.
+    vip = models.FloatField(db_column='VIP', default=0 ,blank=True, null=False)  # Field name made lowercase.
+    roomservice = models.FloatField(db_column='RoomService', default=0 ,blank=True, null=False)  # Field name made lowercase.
+    foodcourt = models.FloatField(db_column='FoodCourt', default=0 ,blank=True, null=False)  # Field name made lowercase.
+    shoppingmall = models.FloatField(db_column='ShoppingMall', default=0 ,blank=True, null=False)  # Field name made lowercase.
+    spa = models.FloatField(db_column='Spa', default=0 ,blank=True, null=False)  # Field name made lowercase.
+    vrdeck = models.FloatField(db_column='VRDeck', default=0 ,blank=True, null=False)  # Field name made lowercase.
+    cabin_deck = models.FloatField(db_column='Cabin_Deck', default=0 ,blank=True, null=False)  # Field name made lowercase.
+    cabin_num = models.IntegerField(db_column='Cabin_Num', default=0 ,blank=True, null=False)  # Field name made lowercase.
+    cabin_side = models.FloatField(db_column='Cabin_Side', default=0 ,blank=True, null=False)  # Field name made lowercase.
+    passengerid = models.CharField(db_column='PassengerId', max_length=15, blank=True, null=False)  # Field name made lowercase.
+    transported = models.IntegerField(db_column='Transported',  default=0 ,blank=True, null=False)  # Field name made lowercase.
+    id = models.AutoField(primary_key=True)
+
+    class Meta:
+        managed = False
+        db_table = 'pred'

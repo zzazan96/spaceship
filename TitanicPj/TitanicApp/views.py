@@ -2,11 +2,14 @@ from cProfile import run
 from contextlib import redirect_stderr
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
+from joblib import PrintTime
 from .models import Test
+from .models import Pred
+from sqlalchemy import create_engine
 
 #test
 
-import numpy as np 
+
 import pandas as pd 
 import matplotlib.pyplot as plt
 
@@ -110,14 +113,27 @@ def test2(request):
 
     output= pd.DataFrame(df_test)
     output['Transported'] = Y_pre
+    
+    mean_CS = output[["CryoSleep", "Transported"]].groupby(['CryoSleep'], as_index=True).mean()
+    # mean_VIP =output[["VIP", "Transported"]].groupby(['VIP'], as_index=True).mean()
+    # mean_HP =output[["HomePlanet", "Transported"]].groupby(['HomePlanet'], as_index=True).mean()
+    # mean_DT =output[["Destination", "Transported"]].groupby(['Destination'], as_index=True).mean()
+    # mean_AGE =output[["Age", "Transported"]].groupby(['Age'], as_index=True).mean()
+    
     # print(output.infer_objects())
     # qs = output.infer_objects()
     
     # qs = Test.objects.filter(passengerid__startswith="최").values()
     # print(qs)
-  
-    last_output = pd.DataFrame(output.iloc[-1])
     
-    context = {'last_output' : last_output.to_html()}
+    last_output = pd.DataFrame(output.iloc[-1])
+    engine = create_engine("mysql+pymysql://{user}:{pw}@localhost/{db}"
+                       .format(user="Spaceship",
+                               pw="Spaceship",
+                               db="spaceship"))
+
+    last_output.transpose().to_sql('pred', con = engine, if_exists = 'append', index=False )
+    pred = Pred.objects.last()
+    context = {'pred' : pred }
     
     return render(request, 'TitanicApp/test2.html', context)
