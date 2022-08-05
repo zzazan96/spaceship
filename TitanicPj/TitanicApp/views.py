@@ -7,6 +7,8 @@ from .models import Test
 from .models import Pred
 from sqlalchemy import create_engine
 
+import json
+
 #test
 
 
@@ -104,28 +106,23 @@ def test2(request):
     X_test = df_test.drop('PassengerId', axis=1).copy()
     X_train.shape, Y_train.shape, X_test.shape
    
-    #Logistic Regression
+    #Logistic Regression    
     logi_R = LogisticRegression()
     logi_R.fit(X_train, Y_train)
     Y_pre=logi_R.predict(X_test)
     acc_log = round(logi_R.score(X_train, Y_train)*100, 2)
-    # print(acc_log)
+   
 
     output= pd.DataFrame(df_test)
     output['Transported'] = Y_pre
     
-    mean_CS = output[["CryoSleep", "Transported"]].groupby(['CryoSleep'], as_index=True).mean()
-    # mean_VIP =output[["VIP", "Transported"]].groupby(['VIP'], as_index=True).mean()
-    # mean_HP =output[["HomePlanet", "Transported"]].groupby(['HomePlanet'], as_index=True).mean()
-    # mean_DT =output[["Destination", "Transported"]].groupby(['Destination'], as_index=True).mean()
-    # mean_AGE =output[["Age", "Transported"]].groupby(['Age'], as_index=True).mean()
+    mean_CS = (1 - output[["CryoSleep", "Transported"]].groupby(['CryoSleep'], as_index=True).mean()).round(2) * 100
+    mean_VIP =(1 - output[["VIP", "Transported"]].groupby(['VIP'], as_index=True).mean()).round(2) * 100
+    mean_HP =(1 - output[["HomePlanet", "Transported"]].groupby(['HomePlanet'], as_index=True).mean()).round(2) * 100
+    mean_DT =(1 - output[["Destination", "Transported"]].groupby(['Destination'], as_index=True).mean()).round(2) * 100
+    mean_AGE =(1 - output[["Age", "Transported"]].groupby(['Age'], as_index=True).mean()).round(2) * 100
     
-    # print(output.infer_objects())
-    # qs = output.infer_objects()
-    
-    # qs = Test.objects.filter(passengerid__startswith="최").values()
-    # print(qs)
-    
+  
     last_output = pd.DataFrame(output.iloc[-1])
     engine = create_engine("mysql+pymysql://{user}:{pw}@localhost/{db}"
                        .format(user="Spaceship",
@@ -134,6 +131,19 @@ def test2(request):
 
     last_output.transpose().to_sql('pred', con = engine, if_exists = 'append', index=False )
     pred = Pred.objects.last()
-    context = {'pred' : pred }
+    js_CS =json.loads(mean_CS.to_json(orient = 'records'))
+    js_VIP =json.loads( mean_VIP.to_json(orient = 'records'))
+    js_HP = json.loads(mean_HP.to_json(orient = 'records'))
+    js_DT = json.loads(mean_DT.to_json(orient = 'records'))
+    js_AGE = json.loads(mean_AGE.to_json(orient = 'records'))
+  
+  
+    context = {'pred' : pred , 
+               'js_CS' : enumerate(js_CS),
+               'js_VIP' : enumerate(js_VIP),
+               'js_HP' : enumerate(js_HP),
+               'js_DT' : enumerate(js_DT),
+               'js_AGE' : enumerate(js_AGE)
+               }
     
     return render(request, 'TitanicApp/test2.html', context)

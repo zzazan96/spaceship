@@ -30,8 +30,74 @@
       </tbody>
     </table>
     <div>
-      동면여부별 생존율
-      <br />
+      <h3>동면 여부별 생존확율</h3>
+      {% for index, transported in js_CS %} 
+        {% for key,value in transported.items%} 
+          {% if index == 0 %}
+          <p>비동면시 : {{ value }}%</p>
+          {% else %}
+          <p>동면시 : {{ value }}%</p>
+          {% endif %} 
+        {% endfor %} 
+      {% endfor %}
+    </div>
+    <div>
+      <h3>VIP 여부에 따른 생존확율</h3>
+      {% for index, transported in js_VIP %} 
+        {% for key,value in transported.items%} 
+          {% if index == 0 %}
+          <p>일반 : {{ value }}%</p>
+          {% else %}
+          <p>VIP : {{ value }}%</p>
+          {% endif %} 
+        {% endfor %} 
+      {% endfor %}
+    </div>
+    <div>
+      <h3>출신지에 따른 생존확율</h3>
+      {% for index, transported in js_HP %} 
+        {% for key,value in transported.items%} 
+          {% if index == 0 %}
+          <p>지구출신 : {{ value }}%</p>
+          {% elif index == 1 %}
+          <p>유로파출신 : {{ value }}%</p>
+          {% else %}
+          <p>화성출신 : {{ value }}%</p>
+          {% endif %} 
+        {% endfor %} 
+      {% endfor %}
+    </div>
+    <div>
+      <h3>목적지에 따른 생존확율</h3>
+      {% for index, transported in js_DT %} 
+        {% for key,value in transported.items%} 
+          {% if index == 0 %}
+          <p>TRAPPIST-1e : {{ value }}%</p>
+          {% elif index == 1 %}
+          <p>55 Cancri e : {{ value }}%</p>
+          {% else %}
+          <p>PSO J318.5-22 : {{ value }}%</p>
+          {% endif %} 
+        {% endfor %} 
+      {% endfor %}
+    </div>
+    <div>
+      <h3>나이별 생존확율</h3>
+      {% for index, transported in js_AGE %} 
+        {% for key,value in transported.items%} 
+          {% if index == 0 %}
+          <p>0세 ~ 18세 : {{ value }}%</p>
+          {% elif index == 1 %}
+          <p>19세 ~ 24세 : {{ value }}%</p>
+          {% elif index == 2 %}
+          <p>25세 ~ 30세 : {{ value }}%</p>
+          {% elif index == 3 %}
+          <p>31세 ~ 40세 : {{ value }}%</p>
+          {% else %}
+          <p>41세이상 : {{ value }}%</p>
+          {% endif %} 
+        {% endfor %} 
+      {% endfor %}
     </div>
   </body>
 </html>
