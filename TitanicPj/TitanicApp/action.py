@@ -73,6 +73,6 @@ print(mean_HP)
 print(mean_DT)
 print(mean_AGE)
 
-
+print(logi_R.fit(X_train, Y_train))
     
 # learning(conn)
