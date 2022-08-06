@@ -765,10 +765,9 @@ p.cursor {
 	justify-content: center;
 	margin-top: 150px;
 	margin-left: 8%;
-	animation: fadein 5s;
-	-moz-animation: fadein 15s; /* Firefox */
-	-webkit-animation: fadein 35s; /* Safari and Chrome */
-	-o-animation: fadein 15s; /* Opera */
+	animation: fadein 3s 3.8s ease-out forwards;
+	opacity: 0;
+	-webkit-animation: fadein 3s 3.8s ease-out forwards; /* Safari and Chrome */
 }
 .info0 {
 	font-size: 20px;
@@ -778,77 +777,52 @@ p.cursor {
 	justify-content: center;
 	margin-top: 50px;
 	margin-left: 8%;
-	animation: fadein 5s;
-	-moz-animation: fadein 15s; /* Firefox */
-	-webkit-animation: fadein 35s; /* Safari and Chrome */
-	-o-animation: fadein 15s; /* Opera */
+	animation: fadein 3s 3.8s ease-out forwards;
+	opacity: 0;
+	-webkit-animation: fadein 3s 3.8s ease-out forwards; /* Safari and Chrome */
 }
 .info1 {
 	float: left;
-	width: 25%;
+	width: 28%;
 	height: 30%;
 	box-sizing: border-box;
 }
 .info2 {
 	float: left;
 	height: 30%;
-	width: 25%;
+	width: 28%;
 	box-sizing: border-box;
 }
 .info3 {
 	float: right;
-	width: 25%;
+	width: 28%;
 	height: 30%;
 	box-sizing: border-box;
 }
 .info4 {
 	float: right;
-	width: 25%;
+	width: 30%;
 	height: 30%;
 	box-sizing: border-box;
 }
 .info5 {
 	float: right;
-	width: 25%;
+	width: 30%;
 	height: 30%;
 	box-sizing: border-box;
 }
 
 @keyframes fadein {
-	from {
-		opacity: 0;
-	}
-	to {
-		opacity: 1;
-	}
-}
-@-moz-keyframes fadein {
-	/* Firefox */
-	from {
-		opacity: 0;
-	}
-	to {
+	100% {
 		opacity: 1;
 	}
 }
 @-webkit-keyframes fadein {
-	/* Safari and Chrome */
-	from {
-		opacity: 0;
-	}
-	to {
+	100% {
 		opacity: 1;
 	}
 }
-@-o-keyframes fadein {
-	/* Opera */
-	from {
-		opacity: 0;
-	}
-	to {
-		opacity: 1;
-	}
-}
+
 #load {
 	width: 100%;
 	height: 100%;
@@ -858,10 +832,13 @@ p.cursor {
 	background: white;
 	z-index: 99;
 	text-align: center;
+	opacity: 0.8;
 }
 
 #load > img {
 	position: absolute;
+	width: 90%;
+	height: 90%;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
@@ -870,4 +847,15 @@ p.cursor {
 	-ms-transform: translate(-50%, -50%);
 	-o-transform: translate(-50%, -50%);
 	z-index: 100;
+}
+
+.name {
+	opacity: 0;
+	animation: fadeInText 2s 3.8s ease-out forwards;
+}
+
+@keyframes fadeInText {
+	100% {
+		opacity: 1;
+	}
 }
