@@ -146,4 +146,5 @@ def test2(request):
                'js_AGE' : enumerate(js_AGE)
                }
     
-    return render(request, 'TitanicApp/test2.html', context)
+    return render(request, 'TitanicApp/index3 copy.html', context)
+    # return render(request, 'TitanicApp/test2.html', context)
