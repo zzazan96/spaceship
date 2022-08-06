@@ -118,7 +118,7 @@ String.prototype.toKorChars = function () {
 };
 
 //타이핑할 문장
-var result1 = "You Die! ";
+var result1 = "You Died! ";
 var result2 = "당신은 살아남지 못했습니다. ";
 var result3 = "You Survived! ";
 var result4 = "당신은 살아남았습니다. ";

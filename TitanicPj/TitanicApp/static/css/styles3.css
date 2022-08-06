@@ -562,7 +562,7 @@
 }
 
 .navbar-light .navbar-brand {
-	color: rgba(0, 0, 0, 0.9);
+	color: white;
 }
 .navbar-light .navbar-brand:hover,
 .navbar-light .navbar-brand:focus {
@@ -633,11 +633,6 @@
 .navbar-dark .navbar-text a:hover,
 .navbar-dark .navbar-text a:focus {
 	color: #fff;
-}
-
-.bg-light {
-	--bs-bg-opacity: 1;
-	background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity)) !important;
 }
 
 .container,
@@ -724,7 +719,7 @@ body {
 p.result1 {
 	color: #fff;
 	display: inline-block;
-	font-size: 6rem;
+	font-size: 11rem;
 	height: 30px;
 	line-height: 30px;
 	border-right: 1px solid #fff;
@@ -736,7 +731,7 @@ p.result1 {
 p.result2 {
 	color: #fff;
 	display: inline-block;
-	font-size: 2rem;
+	font-size: 3rem;
 	height: 30px;
 	line-height: 30px;
 	border-right: 1px solid #fff;
@@ -744,6 +739,7 @@ p.result2 {
 	box-sizing: border-box;
 	padding: 0;
 	margin: 5px;
+	margin-top: 50px;
 }
 p.cursor {
 	animation: cursor 0.4s infinite;
@@ -762,7 +758,7 @@ p.cursor {
 }
 
 .info {
-	font-size: 20px;
+	font-size: 25px;
 	color: #fff;
 	width: 90%;
 	display: flex;
@@ -774,28 +770,41 @@ p.cursor {
 	-webkit-animation: fadein 10s; /* Safari and Chrome */
 	-o-animation: fadein 15s; /* Opera */
 }
+.info0 {
+	font-size: 25px;
+	color: #fff;
+	width: 90%;
+	display: flex;
+	justify-content: center;
+	margin-top: 50px;
+	margin-left: 8%;
+	animation: fadein 5s;
+	-moz-animation: fadein 15s; /* Firefox */
+	-webkit-animation: fadein 10s; /* Safari and Chrome */
+	-o-animation: fadein 15s; /* Opera */
+}
 .info1 {
 	float: left;
 	width: 25%;
-	height: 40%;
+	height: 30%;
 	box-sizing: border-box;
 }
 .info2 {
 	float: left;
-	height: 40%;
+	height: 30%;
 	width: 25%;
 	box-sizing: border-box;
 }
 .info3 {
 	float: right;
 	width: 25%;
-	height: 40%;
+	height: 30%;
 	box-sizing: border-box;
 }
 .info4 {
 	float: right;
 	width: 25%;
-	height: 40%;
+	height: 30%;
 	box-sizing: border-box;
 }
 .info5 {

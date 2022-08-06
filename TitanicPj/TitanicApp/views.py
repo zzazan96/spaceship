@@ -88,7 +88,7 @@ def add(request):
     test.save()
    
 
-    return HttpResponseRedirect('/index2_2')
+    return HttpResponseRedirect('/test2')
 
 def test2(request):
     
