@@ -11783,19 +11783,26 @@ footer.footer {
     height: 24px;
     width: 90px;
     border: 1px solid #333;
-    line-height: 24px;
+    line-height: 40px;
     text-align: center;
     font-weight:bold;
     font-size:13px;
 }
 .select input[type=radio]+label{
-    background-color: #fff;
-    color: #333;
+    background-color: black;
+    color: black;
+	width: 190px;
+    height: 55px;
+	font-size: larger;
 }
 .select input[type=radio]:checked+label{
-    background-color: #333;
-    color: #fff;
+    background-color: white;
+    color: black;
+	width: 190px;
+    height: 55px;
+	font-size: larger;
 }
+
 
 .select2 {
     padding: 15px 10px;
@@ -11809,19 +11816,26 @@ footer.footer {
     height: 24px;
     width: 90px;
     border: 1px solid #333;
-    line-height: 24px;
+    line-height: 40px;
     text-align: center;
     font-weight:bold;
     font-size:13px;
 }
 .select2 input[type=radio]+label{
-    background-color: #fff;
-    color: #333;
+    background-color: black;
+    color: black;
+	width: 190px;
+    height: 55px;
+	font-size: larger;
 }
 .select2 input[type=radio]:checked+label{
-    background-color: #333;
-    color: #fff;
+    background-color: white;
+    color: black;
+	width: 190px;
+    height: 55px;
+	font-size: larger;
 }
+
 
 .select3 {
     padding: 15px 10px;
@@ -11835,19 +11849,26 @@ footer.footer {
     height: 24px;
     width: 90px;
     border: 1px solid #333;
-    line-height: 24px;
+    line-height: px;
     text-align: center;
     font-weight:bold;
     font-size:13px;
 }
 .select3 input[type=radio]+label{
-    background-color: #fff;
-    color: #333;
+    background-color: black;
+    color: black;
+	width: 190px;
+    height: 55px;
+	font-size: larger;
 }
 .select3 input[type=radio]:checked+label{
-    background-color: #333;
-    color: #fff;
+    background-color: white;
+    color: black;
+	width: 190px;
+    height: 55px;
+	font-size: larger;
 }
+
 
 .select4 {
     padding: 15px 10px;
@@ -11861,19 +11882,26 @@ footer.footer {
     height: 24px;
     width: 90px;
     border: 1px solid #333;
-    line-height: 24px;
+    line-height: 40px;
     text-align: center;
     font-weight:bold;
     font-size:13px;
 }
 .select4 input[type=radio]+label{
-    background-color: #fff;
-    color: #333;
+    background-color: black;
+    color: black;
+	width: 190px;
+    height: 55px;
+	font-size: larger;
 }
 .select4 input[type=radio]:checked+label{
-    background-color: #333;
-    color: #fff;
+    background-color: white;
+    color: black;
+	width: 190px;
+    height: 55px;
+	font-size: larger;
 }
+
 
 .select5 {
     padding: 15px 10px;
@@ -11887,19 +11915,26 @@ footer.footer {
     height: 24px;
     width: 90px;
     border: 1px solid #333;
-    line-height: 24px;
+    line-height: 40px;
     text-align: center;
     font-weight:bold;
     font-size:13px;
 }
 .select5 input[type=radio]+label{
-    background-color: #fff;
-    color: #333;
+    background-color: black;
+    color: black;
+	width: 190px;
+    height: 55px;
+	font-size: larger;
 }
 .select5 input[type=radio]:checked+label{
-    background-color: #333;
-    color: #fff;
+    background-color: white;
+    color: black;
+	width: 190px;
+    height: 55px;
+	font-size: larger;
 }
+
 
 .select6 {
     padding: 15px 10px;
@@ -11913,19 +11948,26 @@ footer.footer {
     height: 24px;
     width: 90px;
     border: 1px solid #333;
-    line-height: 24px;
+    line-height: 40px;
     text-align: center;
     font-weight:bold;
     font-size:13px;
 }
 .select6 input[type=radio]+label{
-    background-color: #fff;
-    color: #333;
+    background-color: black;
+    color: black;
+	width: 190px;
+    height: 55px;
+	font-size: larger;
 }
 .select6 input[type=radio]:checked+label{
-    background-color: #333;
-    color: #fff;
+    background-color: white;
+    color: black;
+	width: 190px;
+    height: 55px;
+	font-size: larger;
 }
+
 
 .select7 {
     padding: 15px 10px;
@@ -11939,16 +11981,22 @@ footer.footer {
     height: 24px;
     width: 90px;
     border: 1px solid #333;
-    line-height: 24px;
+    line-height: 40px;
     text-align: center;
     font-weight:bold;
     font-size:13px;
 }
 .select7 input[type=radio]+label{
-    background-color: #fff;
-    color: #333;
+    background-color: black;
+    color: black;
+	width: 190px;
+    height: 55px;
+	font-size: larger;
 }
 .select7 input[type=radio]:checked+label{
-    background-color: #333;
-    color: #fff;
+    background-color: white;
+    color: black;
+	width: 190px;
+    height: 55px;
+	font-size: larger;
 }
