@@ -2,7 +2,6 @@ from cProfile import run
 from contextlib import redirect_stderr
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
-from joblib import PrintTime
 from .models import Test
 from .models import Pred
 from sqlalchemy import create_engine
