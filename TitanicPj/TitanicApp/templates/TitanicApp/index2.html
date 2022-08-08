@@ -14,7 +14,15 @@
         <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
         <!-- Core theme CSS (includes Bootstrap)-->
+        
         <link href="../../static/css/styles1.css" rel="stylesheet" />
+        <script
+        src="https://code.jquery.com/jquery-1.8.0.js"
+        integrity="sha256-00Fh8tkPAe+EmVaHFpD+HovxWk7b97qwqVi7nLvjdgs="
+        crossorigin="anonymous"
+    ></script>
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     </head>
     <body>
         <nav class="navbar navbar-light bg-light static-top">
@@ -104,11 +112,11 @@
                             <br>
                             <br>
                             <div class="select3">
-                            <input type="radio" name="Room" id="openBtn" ><label for="openBtn">Yes</label></input>
-                            <input type="radio" name="Room" id="hideBtn" checked><label for="hideBtn">No</label></input>
+                            <input type="radio" name="Room" id="openBtn"  ><label for="openBtn">Yes</label></input>
+                            <input type="radio" name="Room" id="hideBtn"  checked><label for="hideBtn">No</label></input>
                             </div>
                             <hr>
-                            <div id="checktext">
+                            <div id="checktext"  style="display: none;">
                             <p id="checktext">얼마를 사용하실지 입력해주세요!</p>
                             <input type="number" name="RoomService" id="checktext" min="0" max="30000" value="0">
                             </div>
@@ -121,11 +129,11 @@
                             <br>
                             <br>
                             <div class="select4">
-                                <input type="radio" name="Food" id="openBtn2" ><label for="openBtn2">Yes</label></input>
-                                <input type="radio" name="Food" id="hideBtn2" checked><label for="hideBtn2">No</label></input>
+                                <input type="radio" name="Food" id="openBtn2"  ><label for="openBtn2">Yes</label></input>
+                                <input type="radio" name="Food" id="hideBtn2"  checked><label for="hideBtn2">No</label></input>
                             </div>
                             <hr>
-                            <div id="checktext2">
+                            <div id="checktext2" style="display: none;">
                             <p id="checktext2">얼마를 사용하실지 입력해주세요!</p>
                             <input type="number" name="FoodCourt" id="checktext2" min="0" max="30000" value="0" >
                             </div>
@@ -138,11 +146,11 @@
                             <br>
                             <br>
                             <div class="select5">
-                                <input type="radio" name="Shop" id="openBtn3" ><label for="openBtn3">Yes</label></input>
+                                <input type="radio" name="Shop" id="openBtn3"  ><label for="openBtn3">Yes</label></input>
                                 <input type="radio" name="Shop" id="hideBtn3" checked><label for="hideBtn3">No</label></input>
                             </div>
                             <hr>
-                            <div id="checktext3">
+                            <div id="checktext3" style="display: none;">
                             <p id="checktext3">얼마를 사용하실지 입력해주세요!</p>
                             <input type="number" name="ShoppingMall" id="checktext3" min="0" max="30000" value="0">
                             </div>
@@ -151,7 +159,7 @@
                     </div>
                     <div class="swiper-slide">
                         <div class="text-wrap" id="wrapper">
-                            <label for="yes_no_radio">온천을 이용하시겠습니까?</label>
+                            <label for="Spa_radio">온천을 이용하시겠습니까?</label>
                             <br>
                             <br>
                             <div class="select6">
@@ -159,7 +167,7 @@
                                 <input type="radio" name="Sp" id="hideBtn4" checked><label for="hideBtn4">No</label></input>
                             </div>
                             <hr>
-                            <div id="checktext4">
+                            <div id="checktext4" style="display: none;">
                             <p id="checktext4">얼마를 사용하실지 입력해주세요!</p>
                             <input type="number" name="Spa" id="checktext4" min="0" max="30000" value="0">
                             </div>
@@ -168,15 +176,15 @@
                     </div>
                     <div class="swiper-slide">
                         <div class="text-wrap" id="wrapper">
-                            <label for="yes_no_radio">VRdeck을 이용하시겠습니까?</label>
+                            <label for="VR_radio">VRdeck을 이용하시겠습니까?</label>
                             <br>
                             <br>
                             <div class="select7">
-                                <input type="radio" name="Food" id="openBtn5" ><label for="openBtn5">Yes</label></input>
-                                <input type="radio" name="Food" id="hideBtn5" checked><label for="hideBtn5">No</label></input>
+                                <input type="radio" name="VR" id="openBtn5" ><label for="openBtn5">Yes</label></input>
+                                <input type="radio" name="VR" id="hideBtn5" checked><label for="hideBtn5">No</label></input>
                             </div>
                             <hr>
-                            <div id="checktext5">
+                            <div id="checktext5" style="display: none;">
                             <p id="checktext5">얼마를 사용하실지 입력해주세요!</p>
                             <input type="number" name="VRDeck" id="checktext5" min="0" max="30000" value="0">
                             </div>
@@ -197,7 +205,7 @@
 													</div>	
 												</div>    
                    	 </div>
-										</div>
+				</div>
                 </div>
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
@@ -209,5 +217,6 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <script src="../../static/javascript/custom.js"></script>
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+
     </body>
 </html>
